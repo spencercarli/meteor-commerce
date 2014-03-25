@@ -5,3 +5,7 @@ class @User extends Minimongoid
   @current: ->
     if Meteor.userId()
       User.init Meteor.user()
+
+  @has_many: [
+    {name: 'carts', foreign_key: 'user_id'}
+  ]
