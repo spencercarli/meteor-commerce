@@ -1,6 +1,8 @@
 Router.map ->
   @route 'home',
-    path: '/'
+    path: '/',
+    before: ->
+      Meteor.subscribe 'products'
 
   @route 'dashboard',
     path: '/dashboard'
