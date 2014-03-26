@@ -1,2 +1,8 @@
 <template name="dashboard">
+  <h1>My Cart</h1>
+  {{#each products}}
+    <p>
+      {{> cart}}
+    </p>
+  {{/each}}
 </template>

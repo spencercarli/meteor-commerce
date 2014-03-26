@@ -6,7 +6,9 @@ Router.map ->
       Meteor.subscribe 'carts'
 
   @route 'dashboard',
-    path: '/dashboard'
+    path: '/dashboard',
+    before: ->
+      Meteor.subscribe 'myCart'
 
   @route 'notFound',
     path: '*'
