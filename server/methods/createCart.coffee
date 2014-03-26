@@ -1,7 +1,9 @@
 Meteor.methods {
   'createCart': (userId, productId)->
-    Cart.create {
+    x = Cart.create {
       user_id: userId
       arrOfProducts: [productId]
     }
+
+    console.log x
 }

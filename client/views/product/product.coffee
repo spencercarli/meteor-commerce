@@ -10,7 +10,7 @@ Template.product.events {
         # Create a new cart if the user doesn't already have one
         Meteor.call 'createCart', Meteor.user()._id, productId
       else
-        alert 'cart already exists for this user'
+        Meteor.call 'addToCart', productId
     else
       alert 'Make an account'
 
