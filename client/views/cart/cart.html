@@ -1,11 +1,22 @@
 <template name="cart">
-  <div class="well col-md-4 product" id="{{_id}}">
-    <h3>{{name}}</h3>
-    <p>
-      {{price}}
-    </p>
-    <p>
-      {{description}}
-    </p>
+  <div class="well row cart" id="{{_id}}">
+
+    <div class="col-md-8">
+      <h3>{{name}}</h3>
+      <p>
+        {{price}}
+      </p>
+      <p>
+        {{description}}
+      </p>
+    </div>
+
+    <div class="col-md-4">
+      <input type="number" name="quantity" value="4">
+      <div class="itemTotal">
+        {{itemTotal}}
+      </div>
+    </div>
+
   </div>
 </template>
