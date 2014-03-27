@@ -4,7 +4,8 @@ Meteor.publish "products", ->
 Meteor.publish "carts", ->
   Cart.find()
 
-Meteor.publish 'myCart', ->
+Meteor.publish 'myProducts', ->
   cart = Cart.first({user_id: @userId})
   productsArr = cart.arrOfProducts
   products = Product.find({'_id': {'$in' : productsArr}})
+  products

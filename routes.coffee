@@ -8,7 +8,9 @@ Router.map ->
   @route 'dashboard',
     path: '/dashboard',
     before: ->
-      Meteor.subscribe 'myCart'
+      # This needs to change because we only need the user's cart
+      Meteor.subscribe 'carts'
+      Meteor.subscribe 'myProducts'
 
   @route 'notFound',
     path: '*'
